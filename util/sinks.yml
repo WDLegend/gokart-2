@@ -1,0 +1,102 @@
+# cmd injection
+cmd_injection_funcs:
+  "os/exec":
+    - "Command"
+    - "CommandContext"
+  "syscall":
+    - "Exec"
+    - "ForkExec"
+    - "StartProcess"
+  "golang.org/x/sys/execabs/":
+    - "Command"
+    - "CommandContext"
+
+# sql injection
+sql_injection_funcs:
+  "(*database/sql.DB)":
+    - Exec
+    - ExecContext
+    - Query
+    - QueryContext
+    - QueryRow
+    - QueryRowContext
+  "(*github.com/jinzhu/gorm.DB)":
+    - Raw
+    - Exec
+    - First
+    - Find
+    - Where
+    - Create
+    - Update
+    - Delete
+    - Scan
+    - Save
+    - Model
+    - Table
+  "(*gorm.io/gorm.DB)":
+    - Raw
+    - Exec
+    - First
+    - Find
+    - Where
+    - Create
+    - Update
+    - Delete
+    - Scan
+    - Save
+    - Model
+    - Table
+  "(*xorm.io/xorm.Session)":
+    - SQL
+    - Where
+    - Find
+    - Get
+    - Insert
+    - Update
+    - Delete
+    - Query
+    - Exec
+    - And
+  "(github.com/Masterminds/squirrel.SelectBuilder)":
+    - From
+    - Where
+    - And
+    - Or
+  "(github.com/Masterminds/squirrel.InsertBuilder)":
+    - Into
+  "(github.com/Masterminds/squirrel.UpdateBuilder)":
+    - Table
+    - Set
+  "(github.com/Masterminds/squirrel.DeleteBuilder)":
+    - From
+    - Where
+
+# rsa vul
+rsa_vul_funcs:
+  "crypto/rsa":
+    - GenerateKey
+
+# ssrf
+ssrf_funcs:
+  "net/http":
+    - Do
+    - Get
+    - Head
+    - Post
+    - PostForm
+  "(*net/http.Client)":
+    - Do
+    - Get
+    - Head
+    - Post
+    - PostForm
+
+# directory traversal
+traversal_funcs:
+  "os":
+    - Create
+    - Open
+    - OpenFile
+  "io/ioutil":
+    - ReadFile
+    - WriteFile
