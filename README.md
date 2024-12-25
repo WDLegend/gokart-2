@@ -50,7 +50,7 @@ https://github.com/praetorian-inc/gokart
 
 https://github.com/JackOfMostTrades/gadgetinspector
 
-https://github.com/Eugeny/tabby
+https://github.com/wh1t3p1g/tabby
 
 https://www.bilibili.com/video/BV1b7411K7P4/
 
